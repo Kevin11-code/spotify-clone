@@ -63,7 +63,7 @@ function Sidebar() {
           <p>Your episodes</p>
         </button>
         <hr className="border-t-[0.1px] border-gray-900" />
-{console.log(playlistId)}
+        {console.log(playlistId)}
         {playlists.map((playlist) => (
           <p
             key={playlist.id}
@@ -79,4 +79,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-    

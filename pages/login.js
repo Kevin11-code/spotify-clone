@@ -1,44 +1,40 @@
 import { ChevronDoubleRightIcon } from "@heroicons/react/24/outline";
 import { getProviders, signIn } from "next-auth/react";
-import Image from "next/image";
 
 function login({ providers }) {
   return (
-    <div
-      className="text-center h-screen w-screen flex items-center justify-center relative"
-      style={{ backgroundColor: "whitesmoke" }}
-    >
-      <div className="bg-black w-screen h-40 flex items-center justify-center relative">
+    <div className="bg-black h-screen w-screen flex flex-col space-y-4 items-center justify-center">
+      <div className="flex items-center">
         <img
-          className="w-16 md-20 lg:w-24 bg-white rounded-full mr-7 md:mr-12 "
+          className="w-16 lg:w-24 bg-white rounded-full mr-3 md:mr-5 "
           src="https://links.papareact.com/9xl"
           alt="spotify logo"
         />
-        <h1
-          className="text-4xl lg:text-9xl md:text-7xl uppercase font-bold"
-          style={{
-            color: "#1ed760",
-          }}
-        >
-          spotify
-        </h1>
-        <small className="absolute top-[6.5rem] right-[24rem] font-extrabold uppercase text-lg text-white hidden lg:block">
-          Clone
-        </small>
-
-        {Object.values(providers).map((provider) => (
-          <div
-            key={provider.name}
-            className="absolute top-auto w-20 h-20 bg-transparent right-10 cursor-pointer"
+        <div className="relative">
+          <h1
+            className="text-3xl lg:text-7xl md:text-5xl uppercase font-bold"
+            style={{
+              color: "#1ed760",
+            }}
           >
-            <ChevronDoubleRightIcon
-              onClick={() => signIn(provider.id, { callbackUrl: "/" })}
-              className="w-20 h-20 animate-pulse"
-              style={{ color: "#1ed760" }}
-            />
-          </div>
-        ))}
+            spotify
+          </h1>
+        </div>
       </div>
+
+      {Object.values(providers).map((provider) => (
+        <div
+          key={provider.name}
+          className="justify-end w-20 h-20 bg-transparent right-10 cursor-pointer"
+        >
+          <div
+            onClick={() => signIn(provider.id, { callbackUrl: "/" })}
+            className="ml-[40%] text-green-200 font-bold text-3xl animate-pulse"
+          >
+            Login
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

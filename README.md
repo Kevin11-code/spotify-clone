@@ -1,4 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Spotify Clone
+#### Next.js, Tailwind CSS,SpotifyAPI, NextAuth and Recoil
+
+<br>
+
+## About the Project
+
+* This project is a Spotify clone built with Next.js, Tailwind CSS, NextAuth, and Recoil. The purpose of this project was to provide a hands-on learning experience for me while building a functional web application that emulates the features and design of the popular music streaming service, Spotify.
+
+* The Spotify clone project is designed to provide a similar user experience to the original application. It features a home page with a search bar, navigation bar, and a list of popular tracks and playlists. Users can sign up and log in using NextAuth.js authentication and view their recently played tracks, favorite songs, and create their own playlists.
+
+* The project also includes features like track playback, song search, and playlist creation, which are powered by the Spotify API. Recoil, a state management library, was used to manage the application's global state and provide smooth user interactions.
+
+* Overall, this project serves as a great example of how to build a functional web application that mimics the features of a popular web service. The developer gained valuable experience in using popular front-end frameworks and libraries like Next.js, Tailwind CSS, NextAuth, and Recoil.
+
+
+<br>
+
 
 ## Getting Started
 
@@ -18,6 +35,15 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+<br>
+
+## Deployed on Vercel
+
+https://spotify-clone-iota-rust.vercel.app/
+
+<br>
+
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -27,7 +53,4 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deployed on Vercel
-
-(https://spotify-clone-iota-rust.vercel.app/)
 

@@ -21,7 +21,7 @@ function Player() {
     useRecoilState(currentTrackIdState);
   const [isPlaying, setIsPlaying] = useRecoilState(isPlayingState);
   const [volume, setVolume] = useState(50);
-  const [shuffle, toggleShuffle] = useState(false);
+  const [shuffle, toggleShuffle] = useState(true);
   const [repeat, setRepeat] = useState(0);
 
   const songInfo = useSongInfo(currentTrackId);
@@ -102,7 +102,7 @@ function Player() {
             onClick={handlePlayPause}
           />
         ) : (
-          <PlayIcon className="button h-12 w-12" onClick={handlePlayPause} />
+          <PlayIcon className="button h-10 w-10" onClick={handlePlayPause} />
         )}
         <ForwardIcon
           className="button h-8 w-8"
@@ -126,10 +126,6 @@ function Player() {
       </div>
 
       <div className="flex items-center space-x-3 md:space-x-4 justify-end p-5">
-        {/* <VolumeDownIcon
-          className="w-5 h-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out"
-          onClick={() => volume > 0 && setVolume(volume - 10)}
-        /> */}
         {volume ? (
           <div
             className="w-5 h-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out"
